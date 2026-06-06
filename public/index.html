@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Universal Discord Bot Privacy Policy</title>
+  <meta
+    name="description"
+    content="Universal privacy policy for Discord bots covering data collection, usage, storage, deletion, and contact information."
+  />
+
+  <style>
+    :root {
+      --bg: #080b12;
+      --card: rgba(255, 255, 255, 0.075);
+      --card-strong: rgba(255, 255, 255, 0.11);
+      --border: rgba(255, 255, 255, 0.13);
+      --text: #f5f7fb;
+      --muted: #aab4c3;
+      --muted-2: #7f8a9a;
+      --accent: #7c5cff;
+      --accent-2: #00d4ff;
+      --good: #57f287;
+      --warning: #ffd166;
+      --shadow: rgba(0, 0, 0, 0.38);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(124, 92, 255, 0.32), transparent 34rem),
+        radial-gradient(circle at 95% 20%, rgba(0, 212, 255, 0.20), transparent 32rem),
+        radial-gradient(circle at 60% 100%, rgba(87, 242, 135, 0.10), transparent 34rem),
+        var(--bg);
+      line-height: 1.7;
+    }
+
+    a {
+      color: #b8adff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      width: min(1080px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 44px 0;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 46px;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.045));
+      box-shadow: 0 26px 85px var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -120px -160px auto;
+      width: 330px;
+      height: 330px;
+      background: radial-gradient(circle, rgba(124, 92, 255, 0.35), transparent 70%);
+      pointer-events: none;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(87, 242, 135, 0.28);
+      color: #caffdd;
+      background: rgba(87, 242, 135, 0.12);
+      font-size: 14px;
+      font-weight: 750;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--good);
+      box-shadow: 0 0 18px var(--good);
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 22px 0 14px;
+      font-size: clamp(38px, 6vw, 72px);
+      line-height: 0.98;
+      letter-spacing: -0.06em;
+    }
+
+    .subtitle {
+      max-width: 790px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 19px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .chip {
+      padding: 10px 14px;
+      border-radius: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.11);
+      background: rgba(255, 255, 255, 0.07);
+      color: #e6ebf5;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 24px;
+      margin-top: 24px;
+      align-items: start;
+    }
+
+    .nav {
+      position: sticky;
+      top: 18px;
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.055);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 18px 55px rgba(0, 0, 0, 0.16);
+    }
+
+    .nav-title {
+      margin: 0 0 10px;
+      color: var(--muted-2);
+      font-size: 12px;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .nav a {
+      display: block;
+      padding: 10px 12px;
+      border-radius: 13px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .nav a:hover {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.075);
+    }
+
+    main {
+      display: grid;
+      gap: 18px;
+    }
+
+    section {
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 25px;
+      background: var(--card);
+      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.18);
+      backdrop-filter: blur(16px);
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 25px;
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+    }
+
+    p {
+      margin: 10px 0 0;
+      color: var(--muted);
+    }
+
+    ul {
+      margin: 12px 0 0;
+      padding-left: 22px;
+      color: var(--muted);
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
+    strong {
+      color: var(--text);
+    }
+
+    .notice {
+      margin-top: 14px;
+      padding: 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(124, 92, 255, 0.28);
+      background: rgba(124, 92, 255, 0.10);
+      color: #dfd9ff;
+    }
+
+    .warning {
+      margin-top: 14px;
+      padding: 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 209, 102, 0.28);
+      background: rgba(255, 209, 102, 0.10);
+      color: #fff0c2;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .mini-card {
+      padding: 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      background: rgba(255, 255, 255, 0.055);
+    }
+
+    .mini-card h3 {
+      margin: 0 0 6px;
+      font-size: 16px;
+    }
+
+    .mini-card p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .footer {
+      margin-top: 28px;
+      color: var(--muted-2);
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 850px) {
+      .hero {
+        padding: 30px;
+      }
+
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        position: static;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="badge">
+        <span class="dot"></span>
+        Privacy Policy
+      </div>
+
+      <h1>Universal Discord Bot Privacy Policy</h1>
+
+      <p class="subtitle">
+        This policy explains what data our Discord bots may collect, how that data is used,
+        how it may be stored, and how users can request deletion.
+      </p>
+
+      <div class="chips">
+        <div class="chip">Last updated: June 6, 2026</div>
+        <div class="chip">No selling user data</div>
+        <div class="chip">No AI training</div>
+        <div class="chip">Discord bot services</div>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="nav">
+        <p class="nav-title">Sections</p>
+        <a href="#overview">Overview</a>
+        <a href="#data">Data We May Collect</a>
+        <a href="#usage">How Data Is Used</a>
+        <a href="#message-content">Message Content</a>
+        <a href="#storage">Data Storage</a>
+        <a href="#sharing">Data Sharing</a>
+        <a href="#deletion">Data Deletion</a>
+        <a href="#security">Security</a>
+        <a href="#contact">Contact</a>
+        <a href="#discord">Discord</a>
+      </aside>
+
+      <main>
+        <section id="overview">
+          <h2>Overview</h2>
+          <p>
+            This Privacy Policy applies to Discord bots operated by the bot owner or development team.
+            Different bots may provide different features, but this policy describes the types of data
+            those bots may collect or process.
+          </p>
+
+          <div class="notice">
+            Our bots are designed to use only the data needed to provide their features.
+          </div>
+        </section>
+
+        <section id="data">
+          <h2>Data We May Collect</h2>
+
+          <p>Depending on the bot and its enabled features, our bots may collect or process:</p>
+
+          <ul>
+            <li>Discord user IDs</li>
+            <li>Discord server IDs</li>
+            <li>Discord channel IDs</li>
+            <li>Discord role IDs</li>
+            <li>Minecraft usernames or other game usernames submitted by users</li>
+            <li>Bot configuration settings set by server staff</li>
+            <li>Command usage data needed to run bot features</li>
+            <li>Message content only when required for a specific bot feature</li>
+          </ul>
+
+          <p>
+            Our bots do <strong>not</strong> collect passwords, payment information, private Discord direct messages,
+            presence/status data, custom statuses, activities, or full Discord server member lists unless a specific
+            bot feature clearly requires it and the required Discord intent has been approved.
+          </p>
+        </section>
+
+        <section id="usage">
+          <h2>How Data Is Used</h2>
+
+          <p>Collected data is only used to provide and maintain bot features, such as:</p>
+
+          <div class="grid">
+            <div class="mini-card">
+              <h3>Account Linking</h3>
+              <p>Linking Discord users to Minecraft or other game usernames.</p>
+            </div>
+
+            <div class="mini-card">
+              <h3>Whitelisting</h3>
+              <p>Adding submitted usernames to a linked Minecraft server whitelist.</p>
+            </div>
+
+            <div class="mini-card">
+              <h3>Bot Commands</h3>
+              <p>Running commands requested by users or server staff.</p>
+            </div>
+
+            <div class="mini-card">
+              <h3>Abuse Prevention</h3>
+              <p>Preventing spam, abuse, duplicate entries, or whitelist bypassing.</p>
+            </div>
+          </div>
+
+          <p>
+            Data may also be used to enforce server configuration, limits, or permissions,
+            and to help server staff manage bot settings.
+          </p>
+        </section>
+
+        <section id="message-content">
+          <h2>Message Content</h2>
+
+          <p>
+            Some bots may need Message Content access to read normal text messages for a specific feature.
+            For example, a Minecraft whitelist bot may read a username sent in a configured whitelist channel
+            so it can add that username to a Minecraft server whitelist.
+          </p>
+
+          <div class="notice">
+            Message content is not used for advertising, profiling, unrelated tracking, or machine learning/AI training.
+          </div>
+
+          <p>
+            If a bot uses message content, it should only use it for the feature that requires it,
+            such as reading a submitted username or processing a command.
+          </p>
+        </section>
+
+        <section id="storage">
+          <h2>Data Storage</h2>
+
+          <p>The bots may store data when needed for bot features, including:</p>
+
+          <ul>
+            <li>Discord IDs</li>
+            <li>Server configuration</li>
+            <li>Submitted usernames</li>
+            <li>Whitelist records</li>
+            <li>Command logs</li>
+            <li>Basic troubleshooting logs</li>
+          </ul>
+
+          <p>
+            Full Discord message content is not stored unless it is necessary for a specific feature,
+            troubleshooting, abuse prevention, or server moderation functionality.
+          </p>
+        </section>
+
+        <section id="sharing">
+          <h2>Data Sharing</h2>
+
+          <p>
+            User data is <strong>not sold</strong>.
+          </p>
+
+          <p>
+            Data may be shared only with services needed to operate bot features. For example,
+            a submitted Minecraft username may be sent to a linked Minecraft server so the username
+            can be added to the whitelist.
+          </p>
+
+          <p>
+            Data may also be shared when required by law, to protect the security of the bot,
+            or to prevent abuse.
+          </p>
+        </section>
+
+        <section id="deletion">
+          <h2>Data Deletion</h2>
+
+          <p>
+            Users may request deletion of their stored bot data by contacting the bot owner,
+            support server, or server staff where the bot is installed.
+          </p>
+
+          <p>
+            After a valid request, stored records connected to that user will be removed where reasonably possible.
+          </p>
+
+          <div class="warning">
+            Some data may remain if it is required for security, abuse prevention, server logs,
+            backups, legal reasons, or technical operation.
+          </div>
+        </section>
+
+        <section id="security">
+          <h2>Security</h2>
+
+          <p>
+            Reasonable steps are taken to protect stored bot data and prevent unauthorized access.
+            However, no online service can guarantee perfect security.
+          </p>
+
+          <p>
+            Server owners should only invite bots they trust and should configure bot permissions carefully.
+          </p>
+        </section>
+
+        <section id="contact">
+          <h2>Contact</h2>
+
+          <p>
+            For privacy questions or data deletion requests, contact the bot owner, support server,
+            or server staff where the bot is installed.
+          </p>
+
+          <div class="notice">
+            Contact method:
+            <strong>REPLACE THIS WITH YOUR SUPPORT SERVER, EMAIL, OR DISCORD CONTACT METHOD</strong>
+          </div>
+        </section>
+
+        <section id="discord">
+          <h2>Discord</h2>
+
+          <p>
+            Use of Discord is also covered by Discord’s own Privacy Policy and Terms of Service.
+            This policy only explains how our bots may collect, use, and store data for bot features.
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <footer class="footer">
+      Universal Discord Bot Privacy Policy
+    </footer>
+  </div>
+</body>
+</html>
